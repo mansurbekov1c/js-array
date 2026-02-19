@@ -292,11 +292,138 @@
 
 // console.log(Object.entries(updateUser));
 
-let user = {
-  name: "Alisher",
-  age: 20,
-};
+// let user = {
+//   name: "Alisher",
+//   age: 20,
+// };
 
-for (let kalit in user) {
-  console.log(kalit, user[kalit]);
-}
+// for (let kalit in user) {
+//   console.log(kalit, user[kalit]);
+// }
+
+// 1
+// let user = {
+//   name: "Ali",
+//   age: 22,
+// };
+// user.isActive = true;
+// console.log(user);
+
+//  2
+// let product = {
+//   title: "Book",
+//   price: 15,
+// };
+
+// product.price = 20;
+// console.log(product);
+
+// // 3
+// let person = {
+//   fName: "Dilshod",
+//   age: 30,
+// };
+
+// delete person.age;
+
+// let { fName, age = 18 } = person;
+
+// console.log(fName);
+// console.log(age);
+
+// 4
+// let car = {
+//   brand: "BMW",
+//   model: "X5",
+//   getFullName() {
+//     console.log(this.brand + " " + this.model);
+//   },
+// };
+
+// car.getFullName();
+
+// 5
+// let user = {
+//   name: "Sam",
+//   address: {
+//     city: "Tashkent",
+//     zip: 100100,
+//   },
+// };
+
+// console.log(user.address);
+
+// 6
+// let info = {
+//   address: {
+//     city: "Samarqand",
+//   },
+// };
+
+// let { address } = info;
+// console.log(address);
+
+// 7
+// let account = {
+//   balance: 100,
+//   addBalance(amount) {
+//     return (this.balance = this.balance + amount);
+//   },
+// };
+// account.addBalance(10);
+
+// console.log(account.balance);
+
+// 8
+// let student = {
+//   name: "Karim",
+//   contact: {
+//     email: "k@gmail.com",
+//     phone: "999",
+//   },
+// };
+
+// student.grade = "A";
+
+// console.log(student.contact.email);
+
+// 9
+// let user = {
+//   firstName: "Bek",
+//   years: 27,
+// };
+
+// let { firstName: fName, years: age } = user;
+
+// console.log(fName, age);
+
+// 10
+// let student = {
+//   name: "Diyor",
+//   scores: {
+//     math: 90,
+//     english: 70,
+//   },
+//   getAverage() {
+//     return (this.scores.math + this.scores.english) / 2;
+//   },
+// };
+
+// console.log(student.getAverage());
+
+// let tagName = document.querySelector("p");
+// let buAydi = document.querySelector("#buAydi");
+// let buClass = document.querySelector(".buClass");
+
+// console.log(buClass);
+
+let matn = document.querySelector(".matn");
+let btn = document.querySelector(".btn");
+
+btn.addEventListener("click", () => {
+  matn.textContent = "alik dunyodan";
+  // matn.innerHTML = "<i>alik dunyodan</i>";
+
+  matn.style.color = "red";
+  matn.style.background = "yellow";
+});
