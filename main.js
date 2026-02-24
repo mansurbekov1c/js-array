@@ -417,13 +417,72 @@
 
 // console.log(buClass);
 
-let matn = document.querySelector(".matn");
+// let matn = document.querySelector(".matn");
+// let btn = document.querySelector(".btn");
+
+// btn.addEventListener("click", () => {
+//   matn.textContent = "alik dunyodan";
+//   // matn.innerHTML = "<i>alik dunyodan</i>";
+
+//   matn.style.color = "red";
+//   matn.style.background = "yellow";
+// });
+
+// let matn = document.querySelector(".matn");
+// let btn = document.querySelector(".btn");
+
+// btn.addEventListener("click", () => {
+//   // matn.classList.add("stil")
+//   matn.classList.remove("active");
+
+//   matn.classList.toggle("stil");
+//   console.log(matn);
+// });
+
+// let btn = document.querySelector(".btn");
+// let card = document.querySelector(".card");
+
+// let yangiMatn = document.createElement("h1");
+
+// yangiMatn.textContent = "Hello World";
+// yangiMatn.classList.add("stil");
+
+// btn.addEventListener("click", () => {
+//   card.appendChild(yangiMatn);
+//   console.log(card);
+// });
+
+// btn.addEventListener("dblclick", () => {
+//   yangiMatn.remove();
+//   console.log(card);
+// });
+
+// let card = document.querySelector(".card");
+
+// card.addEventListener("mouseover", () => {
+//   console.log("mouseover");
+// });
+
+// card.addEventListener("mouseout", () => {
+//   console.log("mouseout");
+// });
+
+// card.addEventListener("mousedown", () => {
+//   console.log("mousedown");
+// });
+
+// card.addEventListener("mouseup", () => {
+//   console.log("mouseup");
+// });
+
+// card.addEventListener("mousemove", () => {
+//   console.log("mousemove");
+// });
 let btn = document.querySelector(".btn");
+let ul = document.querySelector("ul");
 
 btn.addEventListener("click", () => {
-  matn.textContent = "alik dunyodan";
-  // matn.innerHTML = "<i>alik dunyodan</i>";
-
-  matn.style.color = "red";
-  matn.style.background = "yellow";
+  let yangiLi = document.createElement("li");
+  yangiLi.textContent = "yangi element";
+  ul.appendChild(yangiLi);
 });

@@ -1,0 +1,21 @@
+.matn {
+  background-color: red;
+}
+
+.stil {
+  background-color: greenyellow;
+  font-size: 16px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.active {
+  border: 5px solid blue;
+}
+
+.card {
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  border: 5px solid blue;
+}
