@@ -478,11 +478,92 @@
 // card.addEventListener("mousemove", () => {
 //   console.log("mousemove");
 // });
-let btn = document.querySelector(".btn");
-let ul = document.querySelector("ul");
+// let btn = document.querySelector(".btn");
+// let ul = document.querySelector("ul");
 
-btn.addEventListener("click", () => {
-  let yangiLi = document.createElement("li");
-  yangiLi.textContent = "yangi element";
-  ul.appendChild(yangiLi);
+// btn.addEventListener("click", () => {
+//   let yangiLi = document.createElement("li");
+//   yangiLi.textContent = "yangi element";
+//   ul.appendChild(yangiLi);
+// });
+
+// homework 1
+// let text = document.querySelector("#text");
+// let btn = document.querySelector("#btn");
+
+// btn.addEventListener("click", () => {
+//   text.textContent = "ana kuydiii";
+// });
+
+// homework 2
+// let box = document.querySelector(".box");
+// let btn = document.querySelector(".btn");
+
+// btn.addEventListener("click", () => {
+//   box.classList.toggle("style");
+// });
+
+// homework 3
+// let box = document.querySelector(".sir");
+// let btn = document.querySelector(".btn");
+
+// btn.addEventListener("click", () => {
+//   box.classList.toggle("sir");
+// });
+
+// let li = document.querySelectorAll("#list li");
+// let btn = document.querySelector(".btn");
+// let ul = document.querySelector("ul");
+
+// btn.addEventListener("click", () => {
+//   let yangiLi = document.createElement("li");
+//   yangiLi.textContent = "yangi element";
+//   ul.appendChild(yangiLi);
+//   yangiLi.addEventListener("click", () => {
+//     yangiLi.classList.toggle("chop");
+//   });
+// });
+
+// li.forEach((e) => {
+//   e.addEventListener("click", () => {
+//     e.remove();
+//   });
+// });
+
+// let ul = document.querySelector("#list");
+// let btn = document.querySelector(".btn");
+
+// function addElem(count) {
+//   let li = document.createElement("li");
+//   li.textContent = `yangi element ${count}`;
+//   ul.appendChild(li);
+// }
+
+// function remElem() {
+//   let listlar = document.querySelectorAll("#list li");
+//   listlar.forEach((e) => {
+//     e.addEventListener("click", () => {
+//       e.remove();
+//     });
+//   });
+// }
+
+// let count = 0;
+// btn.addEventListener("click", () => {
+//   count++;
+//   addElem(count);
+//   remElem();
+// });
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "g" && e.altKey) {
+    document.body.style.background = "green";
+  }
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "F5") {
+    e.preventDefault();
+    console.log(e.key);
+  }
 });
