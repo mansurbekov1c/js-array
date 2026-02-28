@@ -555,15 +555,54 @@
 //   remElem();
 // });
 
-window.addEventListener("keydown", (e) => {
-  if (e.key === "g" && e.altKey) {
-    document.body.style.background = "green";
-  }
-});
+// window.addEventListener("keydown", (e) => {
+//   if (e.key === "g" && e.altKey) {
+//     document.body.style.background = "green";
+//   }
+// });
 
-document.addEventListener("keydown", function (e) {
-  if (e.key === "F5") {
-    e.preventDefault();
-    console.log(e.key);
-  }
-});
+// document.addEventListener("keydown", function (e) {
+//   if (e.key === "F5") {
+//     e.preventDefault();
+//     console.log(e.key);
+//   }
+// });
+
+// let btn = document.querySelector(".btn");
+
+// function handleClick() {
+//   console.log("bosildi");
+// }
+
+// btn.addEventListener("click", handleClick);
+// btn.removeEventListener("click", handleClick);
+
+// let btn = document.querySelector("btn");
+
+// let timeout = setTimeout(() => {
+//   console.log("Hello World");
+// }, 3000);
+
+// btn.addEventListener("click", () => {
+//   clearTimeout(timeout);
+// });
+
+// zo'r narsa:
+// setInterval(() => {
+//   console.log("ishladiii");
+//   // window.location.reload();
+// }, 1000);
+
+// localStorage.setItem("name", "Madina");
+// localStorage.removeItem("name");
+
+// console.log(localStorage.getItem("name"));
+
+// let son = +localStorage.getItem("son");
+
+// console.log(typeof son);
+
+sessionStorage.setItem("token", "12345678");
+
+let token = sessionStorage.getItem("token");
+console.log(token);
