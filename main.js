@@ -602,7 +602,46 @@
 
 // console.log(typeof son);
 
-sessionStorage.setItem("token", "12345678");
+// sessionStorage.setItem("token", "12345678");
 
-let token = sessionStorage.getItem("token");
-console.log(token);
+// let token = sessionStorage.getItem("token");
+// console.log(token);
+
+// JSON
+// let id = 7;
+
+// fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// for (let i = 1; i <= 10; i++) {
+//   fetch(`https://jsonplaceholder.typicode.com/posts/${i}`)
+//     .then((response) => response.json())
+//     .then((json) => console.log(json));
+// }
+
+// fetch(`https://jsonplaceholder.typicode.com/todos/1`)
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// fetch(`https://jsonplaceholder.typicode.com/comments`)
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// fetch("https://jsonplaceholder.typicode.com/comments?_limit=10")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
+
+// fetch("https://jsonplaceholder.typicode.com/posts?userId=1")
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+axios
+  .get("https://jsonplaceholder.typicode.com/posts")
+  .then((response) => {
+    console.log(response.data);
+  })
+
+  .catch((error) => {
+    console.log(error);
+  });
