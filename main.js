@@ -636,10 +636,63 @@
 //   .then((response) => response.json())
 //   .then((json) => console.log(json));
 
+// axios
+//   .get("https://jsonplaceholder.typicode.com/posts")
+//   .then((response) => {
+//     console.log(response.data);
+//   })
+
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// async function getPosts() {
+//   let response = await axios.get("https://jsonplaceholder.typicode.com/posts");
+
+//   console.log(response.data);
+// }
+
+// getPosts();
+
+// async function getPosts() {
+//   try {
+//     let response = await axios.get(
+//       "https://jsonplaceholder.typicode.com/posts",
+//     );
+
+//     console.log(response.data);
+//   } catch (error) {
+//     console.log("Xatolik yuz berdi");
+//     console.log(error);
+//   }
+// }
+// getPosts();
+
+// async function createPosts() {
+//   try {
+//     let response = await axios.post(
+//       "https://jsonplaceholder.typicode.com/posts",
+//       {
+//         title: "mening birinchi postim",
+//         body: "Lorem ipsum dolor, sit amet consectetur adipisicing.",
+//         userId: 1,
+//       },
+//     );
+
+//     console.log(response.data);
+//   } catch (error) {
+//     console.log("Xatolik yuz berdi");
+//     console.log(error);
+//   }
+// }
+// createPosts();
+
 axios
-  .get("https://jsonplaceholder.typicode.com/posts")
+  .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
   .then((response) => {
     console.log(response.data);
+
+    let list = document.querySelector(".list");
   })
 
   .catch((error) => {
