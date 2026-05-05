@@ -687,14 +687,172 @@
 // }
 // createPosts();
 
-axios
-  .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
-  .then((response) => {
-    console.log(response.data);
+// axios
+//   .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+//   .then((response) => {
+//     console.log(response.data);
 
-    let list = document.querySelector(".list");
+//     let list = document.querySelector(".list");
+//   })
+
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+//tajriba 1
+
+// fetch("https://jsonplaceholder.typicode.com/posts/1")
+//   .then(function (responce) {
+//     return responce.json;
+//   })
+//   .then(function (data) {
+//     const div = document.getElementById("post");
+//     div.innerHTML = `<h2>${data.title}</h2>
+//     <p>${data.body}</p>`;
+//   });
+
+//tajriba 2
+
+// fetch("https://jsonplaceholder.typicode.com/users/1")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     console.log(data);
+//   })
+
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+//tajriba 3
+
+// fetch("https://jsonplaceholder.typicode.com/posts/1")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     const div = document.getElementById("post")
+//     div.innerHTML = `<h2>${data.title}</h2>
+//   })
+//   .catch((err) => (div.innerHTML = "Xatolik!"))
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     data.forEach((elem) =>{
+//        console.log(elem.name, elem.phone)
+//     });
+//    console.log(data);
+//   })
+
+// .catch((err) => (dispatchEvent.innerHTML = "Xatolik!"))
+
+//homework 1
+
+// fetch("https://jsonplaceholder.typicode.com/users/1")
+//   .then((res) => res.json())
+//   .then((data) => {
+//   let top_1 = document.querySelector(".top_1")  ;
+//   let malumot = `ism: ${data.name}, email: ${data.email}`;
+//   top_1.textContent = malumot;
+// })
+// .catch((err) => console.log(err))
+
+//homework 2
+
+// fetch("https://jsonplaceholder.typicode.com/todos/4")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     let title = document.querySelector(".title");
+//     let Title = `title: ${data.title}`;
+//     title.textContent = Title;
+//     if (data.completed === true) {
+//       title.style.color = "green";
+//     } else {
+//       title.style.color = "red";
+//     }
+//     console.log(data.completed);
+//   });
+
+// fetch("https://jsonplaceholder.typicode.com/todos/4")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     let todo = document.querySelector(".todo");
+//     todo.textContent = data.title;
+//     console.log(data.completed);
+//     if (data.completed) {
+//       todo.style.color = "green";
+//     } else {
+//       todo.style.color = "red";
+//     }
+//   })
+//   .catch((err) => console.log(err));
+
+//homework 3
+
+// fetch("https://jsonplaceholder.typicode.com/comments")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     data.forEach((elem) => {
+//       let comments = document.querySelector(".comments");
+//       let comment = document.createElement("p");
+//       comment.textContent = elem.body;
+//       comments.appendChild(comment);
+//     });
+//   })
+//   .catch((err) => console.log(err));
+
+// mission 1
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     data.forEach((elem) => {
+//       let users = document.querySelector(".users");
+//       let user = document.createElement("p");
+//       let malumot = ` ${elem.name}: ${elem.phone}`;
+//       user.textContent = malumot;
+//       users.appendChild(user);
+//     });
+//   });
+
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((res) => res.json())
+  .then((data) => {
+    let container = document.querySelector(".container");
+
+    data.forEach((user) => {
+      let div = document.createElement("div");
+      div.classList.add("box");
+      container.appendChild(div);
+
+      let image = document.createElement("img");
+      image.setAttribute("src", "user_icon.png");
+      image.classList.add("avatar");
+      div.appendChild(image);
+
+      let fName = document.createElement("span");
+      fName.classList.add("fName");
+      fName.textContent = user.name;
+      div.appendChild(fName);
+
+      let username = document.createElement("span");
+      username.classList.add("username");
+      username.textContent = user.username;
+      div.appendChild(username);
+
+      let city = document.createElement("span");
+      city.classList.add("city");
+      city.textContent = user.address.city;
+      div.appendChild(city);
+
+      let zipCode = document.createElement("span");
+      zipCode.classList.add("zipCode");
+      zipCode.textContent = user.address.zipcode;
+      div.appendChild(zipCode);
+
+      let website = document.createElement("a");
+      website.setAttribute("href", "#");
+      website.classList.add("website");
+      website.textContent = user.website;
+      div.appendChild(website);
+    });
   })
-
-  .catch((error) => {
-    console.log(error);
-  });
+  .catch((err) => console.log(err));

@@ -1,3 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
 /* .matn {
   background-color: red;
 }
@@ -41,3 +51,50 @@
 /* .chop {
   opacity: 0.5;
 } */
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.box {
+  background-color: #fff;
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  padding: 50px;
+}
+
+.avatar {
+  width: 170px;
+}
+
+.fName {
+  font-size: 30px;
+  margin: 30px 0 5px 0;
+}
+
+.userName {
+  font-size: 22px;
+}
+
+.city {
+  font-size: 25px;
+  margin: 30px 0 5px 0;
+}
+
+.zipCode {
+  font-size: 25px;
+}
+
+.website {
+  margin-top: 30px;
+}
